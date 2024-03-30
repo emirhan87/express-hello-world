@@ -25,7 +25,7 @@ app.post('/generate', async (req, res) => {
         }, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': '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'
+                'Authorization': 'API KEY'
             }
         });
         res.send(`
