@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 app.post('/generate', async (req, res) => {
     const inputText = req.body.inputText;
     try {
-        const response = await axios.post('http://your-dalle-api-url.com/generate', {
+        const response = await axios.post('https://api.openai.com/v1/images/generations', {
             prompt: inputText,
             size: "1024x1024",
             quality: "standard",
@@ -25,7 +25,7 @@ app.post('/generate', async (req, res) => {
         }, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer YOUR_API_KEY'
+                'Authorization': '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'
             }
         });
         res.send(`
